@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Esercizio03a</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            var colors = ["red", "green", "blue"];
+            var i = 0;
+            
+            function changeColor(element) {
+                element.style.color = colors[i];
+                var second = document.getElementById("second");
+                second.style.color = colors[i];
+                i = (i+1) % (colors.length);
+                setTimeout(changeColor, 1000, element);
+            }
+        </script>
+    </head>
+    <body>
+        <p onclick="changeColor(this)">Esercizio 01: Realizzare un semplice Applicazione Web (AW) in cui l'nterfaccia è composta da due paragrafi di testo. Cliccando sul primo, il colore del testo di entrambi viene modificato. Suggerimenti:</p>
+        <ul id="second">
+            <li>L'evento onClick è presente per qualsiasi elemento HTML nel corpo del documento.</li>
+            <li>Impiegare la parola riservata this</li>
+            <li>Varianti: risolvere con e senza jQuery</li>
+        </ul>
+</body>
+</html>
